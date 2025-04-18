@@ -1,0 +1,34 @@
+# macOS-spezifische Dateien
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Spotlight-Verschlüsselung
+.Spotlight-V100
+.Trashes
+
+# Icon-Dateien
+Icon?
+._*
+
+# macOS-Dateien in Netzlaufwerken
+.VolumeIcon.icns
+com.apple.timemachine.donotpresent
+com.apple.*  
+
+# Datei-Cache von Finder
+.fseventsd
+.TemporaryItems
+.apdisk
+
+# Alle PDF-, PNG- und Word-Dateien ignorieren
+*.pdf
+*.png
+*.doc
+*.docx
+
+/python/
+/flask_example1/
+
+
+
