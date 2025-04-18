@@ -1,0 +1,31 @@
+2025-04-16 15:30:53,024 ERROR: Exception on /reset_password_request [POST] [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/routes.py", line 188, in reset_password_request
+    send_password_reset_email(user)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/email.py", line 20, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/models.py", line 98, in get_reset_password_token
+    app.config['SECRTET_KEY'], algorithm='HS256'
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'SECRTET_KEY'
+2025-04-16 15:34:50,317 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-16 15:41:26,880 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-16 15:46:43,468 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-16 15:56:15,203 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-16 16:02:18,140 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-16 16:15:21,346 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-16 16:20:23,338 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-16 19:16:30,723 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-16 19:53:25,149 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-17 22:44:31,679 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-17 23:03:43,088 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]

@@ -1,0 +1,20 @@
+# Virtuelle Umgebung nicht committen
+.venv/
+
+# PyCharm & VS Code
+.idea/
+.vscode/
+
+# Python & Flask Caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Log- & Umgebungsdateien
+*.log
+.env
+
+*.docx
+*.pdf
+
+

@@ -1,0 +1,94 @@
+2025-04-16 04:52:51,759 ERROR: Exception on /explore [GET] [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/routes.py", line 153, in explore
+    query = sa.select(Post).oder_by(Post.timestamp.desc())
+            ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Select' object has no attribute 'oder_by'. Did you mean: 'order_by'?
+2025-04-16 04:55:14,221 ERROR: Exception on /explore [GET] [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/routes.py", line 153, in explore
+    query = sa.select(Post).oder_by(Post.timestamp.desc())
+            ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Select' object has no attribute 'oder_by'. Did you mean: 'order_by'?
+2025-04-16 04:59:17,837 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:43]
+2025-04-16 05:05:25,367 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:43]
+2025-04-16 07:23:29,962 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:43]
+2025-04-16 07:37:05,907 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:43]
+2025-04-16 07:37:23,972 ERROR: Exception on /index [GET] [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/routes.py", line 30, in index
+    prev_url = url_for('index', page=posts.prev_num) if post.has_prev else None
+                                                        ^^^^
+UnboundLocalError: cannot access local variable 'post' where it is not associated with a value
+2025-04-16 07:37:35,383 ERROR: Exception on /index [GET] [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/routes.py", line 30, in index
+    prev_url = url_for('index', page=posts.prev_num) if post.has_prev else None
+                                                        ^^^^
+UnboundLocalError: cannot access local variable 'post' where it is not associated with a value
+2025-04-16 07:37:38,152 ERROR: Exception on /index [GET] [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/routes.py", line 30, in index
+    prev_url = url_for('index', page=posts.prev_num) if post.has_prev else None
+                                                        ^^^^
+UnboundLocalError: cannot access local variable 'post' where it is not associated with a value

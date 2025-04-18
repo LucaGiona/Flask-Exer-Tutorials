@@ -1,0 +1,87 @@
+2025-04-16 07:45:03,786 ERROR: Exception on /index [GET] [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/routes.py", line 30, in index
+    prev_url = url_for('index', page=posts.prev_num) if posts.has_prev else None
+                                                        ^^^^
+UnboundLocalError: cannot access local variable 'post' where it is not associated with a value
+2025-04-16 07:45:13,930 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:43]
+2025-04-16 07:53:03,856 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:43]
+2025-04-16 14:56:21,122 INFO: Microblog startup [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/__init__.py:45]
+2025-04-16 14:56:39,433 ERROR: Exception on /reset_password_request [GET] [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/routes.py", line 191, in reset_password_request
+    return render_template('reset_password_request.html', title='Reset Password', form=form)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/templates/reset_password_request.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/templates/base.html", line 33, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/templates/reset_password_request.html", line 8, in block 'content'
+    {{ form.password.label }}<br>
+    ^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
+2025-04-16 14:59:19,419 ERROR: Exception on /reset_password_request [GET] [in /Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/routes.py", line 191, in reset_password_request
+    return render_template('reset_password_request.html', title='Reset Password', form=form)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/templates/reset_password_request.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/templates/base.html", line 33, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/app/templates/reset_password_request.html", line 8, in block 'content'
+    {{ form.password.label }}<br>
+    ^^^^^^^^^^^^^
+  File "/Users/l.maranta/Desktop/Flask-Exercises-Projects/Flask_Tutorial_MiguelGringberg/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
