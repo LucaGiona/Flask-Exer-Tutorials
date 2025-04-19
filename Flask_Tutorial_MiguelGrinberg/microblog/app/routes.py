@@ -210,3 +210,11 @@ def reset_password(token):
         flash(_('Your password has been reset.'))
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
+
+
+
+@app.route('/test-lang')
+def test_lang():
+    lang = get_locale()
+    text = _('Hi, %(username)s!') % {'username': 'Test'}
+    return f"<p>Sprache: {lang}</p><p>Text: {text}</p>"

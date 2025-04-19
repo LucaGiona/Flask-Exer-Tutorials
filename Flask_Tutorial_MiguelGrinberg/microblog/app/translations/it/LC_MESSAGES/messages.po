@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-19 23:11+0200\n"
+"POT-Creation-Date: 2025-04-20 00:21+0200\n"
 "PO-Revision-Date: 2025-04-19 23:18+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -19,7 +19,8 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: app/__init__.py:24
-msgid "Please log in to access this page"
+#, fuzzy
+msgid "Please log in to access this page."
 msgstr "Effettua il login per accedere a questa pagina."
 
 #: app/email.py:30
@@ -244,3 +245,4 @@ msgstr "Segui"
 #: app/templates/user.html:27
 msgid "Unfollow"
 msgstr "Smetti di seguire"
+
