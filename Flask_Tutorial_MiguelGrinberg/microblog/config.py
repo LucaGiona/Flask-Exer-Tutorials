@@ -26,4 +26,10 @@ class Config:
     POSTS_PER_PAGE = 15
 
     LANGUAGES = ['en', 'de', 'it']
+
+    #later add azure translator f.e.
+    USE_FAKE_TRANSLATION = True
+    #MS_TRANSLATOR_KEY = None
+    #MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+
  
