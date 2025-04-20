@@ -24,3 +24,6 @@ class Config:
 
 
     POSTS_PER_PAGE = 15
+
+    LANGUAGES = ['en', 'de', 'it']
+ 
