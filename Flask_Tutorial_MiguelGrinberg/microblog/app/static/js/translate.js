@@ -1,6 +1,6 @@
 async function translate(sourceElem, destElem, sourceLang, destLang){
     document.getElementById(destElem).innerHTML =
-     '<img src="/static/loading.gif">';
+     '<img src="/static/loading.gif alt="Loading...">';
     
     const response = await fetch('/translate', {
         method: 'POST',
