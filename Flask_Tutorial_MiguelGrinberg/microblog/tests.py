@@ -1,15 +1,20 @@
-import os
-os.environ['DATABASE_URL'] = 'sqlite://'
-
+#!/usr/bin/env python
 from datetime import datetime, timezone, timedelta
 import unittest
-from app import app, db
+from app import create_app, db
 from app.models import User, Post
+from config import Config
+
+
+class TestConfig(Config):
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'
 
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
-        self.app_context = app.app_context()
+        self.app = create_app(TestConfig)
+        self.app_context = self.app.app_context()
         self.app_context.push()
         db.create_all()
 
@@ -64,7 +69,6 @@ class UserModelCase(unittest.TestCase):
         u3 = User(username='mary', email='mary@example.com')
         u4 = User(username='david', email='david@example.com')
         db.session.add_all([u1, u2, u3, u4])
-        db.session.commit()
 
         # create four posts
         now = datetime.now(timezone.utc)
@@ -80,7 +84,6 @@ class UserModelCase(unittest.TestCase):
         db.session.commit()
 
         # setup the followers
-        
         u1.follow(u2)  # john follows susan
         u1.follow(u4)  # john follows david
         u2.follow(u3)  # susan follows mary
