@@ -12,6 +12,9 @@ from datetime import datetime, timezone
 from app.email import send_password_reset_email
 from langdetect import detect, LangDetectException
 
+#not for real translate 
+from app.fake_translate import translate
+
 @app.before_request
 def before_request():
     if current_user.is_authenticated:
@@ -224,3 +227,11 @@ def test_lang():
     lang = get_locale()
     text = _('Hi, %(username)s!') % {'username': 'Test'}
     return f"<p>Sprache: {lang}</p><p>Text: {text}</p>"
+
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+    data = request.get_json()
+    return {'text': translate(data['text'],
+                              data['source_language'],
+                              data['dest_language'])}
