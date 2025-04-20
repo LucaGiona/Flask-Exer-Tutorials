@@ -37,4 +37,4 @@ python-dotenv==1.0.1
 
 
 # JWT
-PyJWT==2.8.0
+PyJWT==2.8.0langdetect==1.0.9
