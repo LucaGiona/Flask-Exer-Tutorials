@@ -1,58 +1,35 @@
-# === Flask & Core Extensions ===
-Flask==3.0.0
-Werkzeug==3.0.1
-Flask-Login==0.6.3
-Flask-Mail==0.9.1
-Flask-Migrate==4.0.5
-Flask-Moment==1.0.5
-Flask-SQLAlchemy==3.1.1
-Flask-WTF==1.2.1
-flask-babel==4.0.0
-
-# === DB / Migration ===
-SQLAlchemy==2.0.23
-alembic==1.12.1
-greenlet==3.0.1
-
-# === Internationalisierung / Sprache ===
-Babel==2.13.1
-langdetect==1.0.9
-pytz==2023.3.post1
-
-# === Formularvalidierung ===
+alembic==1.15.2
+babel==2.17.0
+blinker==1.9.0
+certifi==2025.1.31
+click==8.1.8
+dnspython==2.7.0
+elastic-transport==8.17.1
+elasticsearch==8.11.0
 email-validator==2.1.0.post1
-dnspython==2.4.2
-idna==3.4
-
-# === Templates ===
-Jinja2==3.1.2
-MarkupSafe==2.1.3
-
-# === CLI / Hilfen ===
-click==8.1.7
-python-dotenv==1.0.0
-typing_extensions==4.8.0
-setuptools==68.2.2
-packaging==23.2
-
-# === Netzwerk / Tools ===
-requests==2.31.0
-charset-normalizer==3.3.2
-urllib3==2.1.0
-certifi==2023.11.17
-
-# === Signierung / Sicherheit ===
-itsdangerous==2.1.2
-blinker==1.7.0
-
-# === Optional: SMTP-Server für Mailtests ===
-aiosmtpd==1.4.4.post2   # nur nötig für mailtest.py
-
-# === Optional: JWT (nicht in Grinberg enthalten) ===
-PyJWT==2.8.0            # nur nötig bei Token-basiertem Login
-
-# === Optional / indirekt (nur falls Konflikte auftreten) ===
-attrs==23.1.0
-atpublic==4.0
-six==1.16.0
-Mako==1.3.0
+Flask==2.3.3
+flask-babel==4.0.0
+Flask-Login==0.6.3
+Flask-Mail==0.10.0
+Flask-Migrate==4.0.5
+Flask-Moment==1.0.6
+Flask-SQLAlchemy==3.1.1
+Flask-WTF==1.1.1
+greenlet==3.2.0
+idna==3.10
+itsdangerous==2.2.0
+Jinja2==3.1.6
+langdetect==1.0.9
+Mako==1.3.10
+MarkupSafe==3.0.2
+packaging==24.2
+PyJWT==2.10.1
+python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
+pytz==2025.2
+six==1.17.0
+SQLAlchemy==2.0.40
+typing_extensions==4.13.2
+urllib3==2.4.0
+Werkzeug==2.3.7
+WTForms==3.1.2
